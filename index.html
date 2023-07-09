@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
@@ -63,7 +64,7 @@
             margin-left: auto;
             margin-right: auto;
             overflow-x: auto;
-            padding:20px;
+            padding: 20px;
             overflow: hidden;
         }
 
@@ -75,24 +76,23 @@
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agrega sombra a las imágenes */
             }
 
-            .mygallery img:nth-child(2n) {
-                grid-area: span 2 / span 3;
-            }
+                .mygallery img:nth-child(2n) {
+                    grid-area: span 2 / span 3;
+                }
 
-            .mygallery img:nth-child(3n) {
-                grid-area: span 1 / span 3;
-            }
+                .mygallery img:nth-child(3n) {
+                    grid-area: span 1 / span 3;
+                }
 
-            .mygallery img:nth-child(7n) {
-                grid-area: span 3 / span 4;
-            }
+                .mygallery img:nth-child(7n) {
+                    grid-area: span 3 / span 4;
+                }
 
-            .mygallery img:nth-child(9n) {
-                grid-area: span 2 / span 2;
-            }
+                .mygallery img:nth-child(9n) {
+                    grid-area: span 2 / span 2;
+                }
 
         .responsive-image {
-
         }
 
         .gallery-item {
@@ -448,7 +448,7 @@
                 overflow: hidden;
             }
 
-           /**/
+            /**/
             .mygallery {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
@@ -467,31 +467,31 @@
                 overflow-x: auto;
             }
 
-                .mygallery img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            .mygallery img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+                .mygallery img:nth-child(2n) {
+                    grid-area: span 2 / span 3;
                 }
 
-                    .mygallery img:nth-child(2n) {
-                        grid-area: span 2 / span 3;
-                    }
+                .mygallery img:nth-child(3n) {
+                    grid-area: span 1 / span 3;
+                }
 
-                    .mygallery img:nth-child(3n) {
-                        grid-area: span 1 / span 3;
-                    }
+                .mygallery img:nth-child(7n) {
+                    grid-area: span 3 / span 4;
+                }
 
-                    .mygallery img:nth-child(7n) {
-                        grid-area: span 3 / span 4;
-                    }
+                .mygallery img:nth-child(9n) {
+                    grid-area: span 2 / span 2;
+                }
 
-                    .mygallery img:nth-child(9n) {
-                        grid-area: span 2 / span 2;
-                    }
-
-           /**/
+            /**/
             .video-container {
                 position: relative;
                 width: 100%;
@@ -503,14 +503,14 @@
                 width: 40%; /* Tamaño original en dispositivos de escritorio */
             }
 
-                .video-container video {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                }
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
 
             .container {
                 max-width: 100vw;
@@ -826,15 +826,18 @@
         
         <div class="confirm-wrappertwo" style="background-color: rgba(104, 132, 156, 0.8); width: 100%;">
             <div style="width: 100%; ">
-                <br />
-
-                <p style="font-family: 'Lobster', cursive; font-style: normal; font-weight: 400; font-size: 36px; color: #ddaf36;">Galería</p>
-
+                <br /><br /><br />
                 <img src="camerapic.png" alt="copas" class="responsive-image">
-                <div class="circle-photo">
-                    <img src="nosotros.jpeg" alt="Foto de nosotros">
+                <div>
+                    <i class="material-icons" style="transform: rotateY(180deg);font-size: 40px; color:white; vertical-align: middle;">trending_flat</i>
+
+                    <span style="color:white;vertical-align: middle;">Desliza para ver todas las fotos</span>
+
+                    <i class="material-icons" style=" font-size: 40px; color:white; vertical-align: middle;">trending_flat</i>
+
+
+
                 </div>
-                <h2>HOLA</h2>
                 <div class="mygallery-wrapper">
                     <div class="mygallery">
                         <img src="nosotros.jpeg" alt="copas">
@@ -845,10 +848,10 @@
                         <img src="nosotros.jpeg" alt="copas">
 
                     </div>
-                    </div>
                 </div>
-                <br />
             </div>
+            <br />
+        </div>
 
         <br /><br />
 
