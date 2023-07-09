@@ -440,7 +440,8 @@
                 justify-content: center;
                 align-items: center;
                 background-color: rgba(104, 132, 156, 0.8);
-                width: 100%;
+                width: 70%;
+                overflow: hidden;
             }
 
            /**/
@@ -448,15 +449,19 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
                 grid-gap: 10px;
-                grid-auto-rows: 100px;
+                grid-auto-rows: 200px;
                 grid-auto-flow: column dense;
-                width: 100%;
-                height: auto;
+                width: max-content;
+                height: 430px;
                 margin-left: auto;
                 margin-right: auto;
+                white-space: nowrap;
+            }
+
+            .mygallery-wrapper {
+                width: 100%;
                 overflow-x: auto;
-                padding: 10px;
-                overflow: hidden;
+                padding: 20px;
             }
 
                 .mygallery img {
@@ -814,25 +819,28 @@
         <div class="confirm-wrappertwo" style="background-color: rgba(104, 132, 156, 0.8); width: 100%;">
             <div style="width: 100%; ">
                 <br />
-                <h4>Galería</h4>
+
+                <p style="font-family: 'Lobster', cursive; font-style: normal; font-weight: 400; font-size: 36px; color: #ddaf36;">Galería</p>
 
                 <img src="camerapic.png" alt="copas">
                 <div class="circle-photo">
                     <img src="nosotros.jpeg" alt="Foto de nosotros">
                 </div>
                 <h2>HOLA</h2>
-                <div class="mygallery">
-                    <img src="nosotros.jpeg" alt="copas">
-                    <img src="nosotros.jpeg" alt="copas">
-                    <img src="nosotros.jpeg" alt="copas">
-                    <img src="nosotros.jpeg" alt="copas">
-                    <img src="nosotros.jpeg" alt="copas">
-                    <img src="nosotros.jpeg" alt="copas">
+                <div class="mygallery-wrapper">
+                    <div class="mygallery">
+                        <img src="nosotros.jpeg" alt="copas">
+                        <img src="nosotros.jpeg" alt="copas">
+                        <img src="nosotros.jpeg" alt="copas">
+                        <img src="nosotros.jpeg" alt="copas">
+                        <img src="nosotros.jpeg" alt="copas">
+                        <img src="nosotros.jpeg" alt="copas">
+
+                    </div>
+                    </div>
                 </div>
-                
+                <br />
             </div>
-            <br />
-        </div>
 
         <br /><br />
 
