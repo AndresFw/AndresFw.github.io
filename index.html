@@ -51,6 +51,7 @@
             grid-gap: 20px;
         }
 
+
         .mygallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
@@ -90,6 +91,9 @@
                 grid-area: span 2 / span 2;
             }
 
+        .responsive-image {
+
+        }
 
         .gallery-item {
             width: 100%;
@@ -447,12 +451,12 @@
            /**/
             .mygallery {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+                grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
                 grid-gap: 10px;
-                grid-auto-rows: 90px;
+                grid-auto-rows: 200px;
                 grid-auto-flow: column dense;
                 width: max-content;
-                height: 220px;
+                height: 600px;
                 white-space: nowrap;
                 margin: 0 auto; /* Simplificado el margen */
             }
@@ -472,26 +476,31 @@
                 }
 
                     .mygallery img:nth-child(2n) {
-                        grid-area: span 2 / span 1;
+                        grid-area: span 2 / span 3;
                     }
 
                     .mygallery img:nth-child(3n) {
-                        grid-area: span 1 / span 1;
+                        grid-area: span 1 / span 3;
                     }
 
                     .mygallery img:nth-child(7n) {
-                        grid-area: span 3 / span 1;
+                        grid-area: span 3 / span 4;
                     }
 
                     .mygallery img:nth-child(9n) {
-                        grid-area: span 2 / span 1;
+                        grid-area: span 2 / span 2;
                     }
+
            /**/
             .video-container {
                 position: relative;
                 width: 100%;
                 height: calc(100vw * 4 / 3); /* Proporción de aspecto 16:9 */
                 overflow: hidden;
+            }
+
+            .responsive-image {
+                width: 40%; /* Tamaño original en dispositivos de escritorio */
             }
 
                 .video-container video {
@@ -821,7 +830,7 @@
 
                 <p style="font-family: 'Lobster', cursive; font-style: normal; font-weight: 400; font-size: 36px; color: #ddaf36;">Galería</p>
 
-                <img src="camerapic.png" alt="copas">
+                <img src="camerapic.png" alt="copas" class="responsive-image">
                 <div class="circle-photo">
                     <img src="nosotros.jpeg" alt="Foto de nosotros">
                 </div>
