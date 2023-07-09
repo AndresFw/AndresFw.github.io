@@ -435,29 +435,54 @@
                 width: 100%;
             }
 
-            .mygallery {
-                display: flex;
-                flex-wrap: nowrap;
-                grid-gap: 10px;
-                grid-auto-rows: 200px;
-                grid-auto-flow: column dense;
-                margin-left: auto;
-                margin-right: auto;
-                overflow-x: scroll;
-                padding: 20px;
-                overflow: hidden;
-            }
-
             .confirm-wrappertwo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: rgba(104, 132, 156, 0.8);
                 width: 100%;
-                overflow-x: scroll;
-                white-space: nowrap;
             }
 
+           /**/
+            .mygallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+                grid-gap: 10px;
+                grid-auto-rows: 100px;
+                grid-auto-flow: column dense;
+                width: 100%;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                overflow-x: auto;
+                padding: 10px;
+                overflow: hidden;
+            }
+
+                .mygallery img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                }
+
+                    .mygallery img:nth-child(2n) {
+                        grid-area: span 2 / span 1;
+                    }
+
+                    .mygallery img:nth-child(3n) {
+                        grid-area: span 1 / span 1;
+                    }
+
+                    .mygallery img:nth-child(7n) {
+                        grid-area: span 3 / span 1;
+                    }
+
+                    .mygallery img:nth-child(9n) {
+                        grid-area: span 2 / span 1;
+                    }
+           /**/
             .video-container {
                 position: relative;
                 width: 100%;
