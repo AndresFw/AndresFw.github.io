@@ -34,6 +34,72 @@
             width: 100%;
         }
 
+        .confirm-wrappertwo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(104, 132, 156, 0.8);
+            width: 100%;
+            overflow-x: auto; /* Agrega un desplazamiento (scroll) horizontal */
+        }
+
+        .gallery-container {
+            width: 1200px; /* Define un tamaño específico para el contenedor */
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .mygallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+            grid-gap: 10px; /*espacio entre imagenes*/
+            grid-auto-rows: 200px;
+            grid-auto-flow: column dense;
+            width: 70%;
+            height: 430px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: auto;
+            padding:20px;
+        }
+
+            .mygallery img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px; /* Agrega bordes redondeados a las imágenes */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agrega sombra a las imágenes */
+            }
+
+            .mygallery img:nth-child(2n) {
+                grid-area: span 2 / span 3;
+            }
+
+            .mygallery img:nth-child(3n) {
+                grid-area: span 1 / span 3;
+            }
+
+            .mygallery img:nth-child(7n) {
+                grid-area: span 3 / span 4;
+            }
+
+            .mygallery img:nth-child(9n) {
+                grid-area: span 2 / span 2;
+            }
+
+
+        .gallery-item {
+            width: 100%;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
         body, .container-padre {
             margin: 0;
             padding: 0;
@@ -134,10 +200,6 @@
             justify-content: center;
             align-items: center;
         }
-
-
-
-
 
         .circle-photo {
             width: 200px;
@@ -248,8 +310,6 @@
                 text-align: left; /* Alinea la columna 1 a la derecha */
                 margin-left: 30px; /* Ajusta la separación entre las columnas */
             }
-
-
 
         .image-wrapper {
             display: flex;
@@ -544,95 +604,6 @@
                 font-size: 12px;
             }
         }
-        /*
-            /* Estilos para dispositivos móviles
-            @media (max-width: 480px) {
-                .container {
-                    padding: 10px;
-                }
-
-                h1 {
-                    font-size: 24px;
-                    margin-top: 30px;
-                }
-
-                h2 {
-                    font-size: 20px;
-                }
-
-                p {
-                    font-size: 16px;
-                }
-
-                .circle-photo {
-                    width: 150px;
-                    height: 150px;
-                }
-
-                .column {
-                    width: 100%;
-                }
-
-                .recommendations {
-                    padding: 10px;
-                }
-
-                    .recommendations h3 {
-                        font-size: 16px;
-                    }
-
-                    .recommendations li {
-                        font-size: 14px;
-                    }
-
-                .confirm-wrapper {
-                    padding: 10px;
-                }
-
-                    .confirm-wrapper h3 {
-                        font-size: 16px;
-                    }
-
-                .confirm-message {
-                    font-size: 14px;
-                }
-
-                .confirm-buttons {
-                    flex-direction: column;
-                    margin-top: 10px;
-                }
-
-                    .confirm-buttons button {
-                        margin: 5px 0;
-                    }
-
-                .hashtag {
-                    font-size: 12px;
-                }
-
-                .video-container {
-                    position: relative;
-                    width: 100%;
-                    padding-bottom: 56.25%;
-                }
-
-                    .video-container video {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                .invitation-development {
-                    font-size: 10px;
-                    padding: 5px;
-                }
-
-                    .invitation-development p {
-                        font-size: 8px;
-                        margin-bottom: 2px;
-                    }
-            }
-        */
     </style>
 </head>
 <body>
@@ -646,7 +617,6 @@
 
 
     <div class="">
-        <!--<h1>Maria y Andrés</h1>-->
         <div class="video-container">
             <video src="file.mp4" controls></video>
         </div>
@@ -687,17 +657,6 @@
             </div>
         </div>
 
-
-
-
-        <!--
-    <p style="font-size: 22px; font-family: 'dancingscript-regular', 'dancing script'; font-style: normal; font-weight: normal; color: #767676;">El amor no es vivir felices siempre, eso es un cuento de hadas. </p>
-    <p style="font-size: 22px; font-family: 'dancingscript-regular', 'dancing script'; font-style: normal; font-weight: normal; color: #767676;">El amor es aprender a encontrarse en las diferencias, a disfrutarse en las similitudes y a apoyarse en los retos para enfrentar la vida juntos.</p>
-
-    <div class="circle-photo">
-        <img src="nosotros.jpeg" alt="Foto de nosotros">
-    </div>
-        -->
         <div class="container" style="display: flex; justify-content: center;">
             <div class="recommendations" style="width: 100%; text-align: center;">
                 <p style="font-family: 'Lobster', cursive; font-style: normal; font-weight: 400; font-size: 26px; color: #767676;">25 de Noviembre de 2023</p>
@@ -736,12 +695,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
 
         <div class="container">
             <div class="recommendations" style="display: flex; justify-content: center;">
@@ -792,38 +745,9 @@
 
         </div>
         <br />
-        <!--
-
-    <div style="display: flex;">
-        <div style="flex: 1;">
-            <h3>Ceremonia</h3>
-
-            <img src="iglesia.png" alt="iglesia">
-            <p style="margin: 0;">Parroquia San Luis Gonzaga</p>
-            <p style="margin: 0;">Parque Principal</p>
-            <p style="margin: 0;">Villanueva - Santander</p>
-            <br />
-            <div style="display: flex; justify-content: center;">
-                <button>3:00 PM</button>
-                <a href="https://www.google.com/maps?q=Catedral+Villanueva+Santander" target="_blank">Cómo Llegar</a>
-            </div>
-        </div>
-        <div style="flex: 1;">
-            <h3>Recepción</h3>
-            <img src="copas.png" alt="copas">
-            <p style="margin: 0;">Cabañas la semilla</p>
-            <p style="margin: 0;"> Vereda Agua Fría</p>
-            <p style="margin: 0;">Villanueva - Santander</p>
-            <br />
-            <div style="display: flex; justify-content: center;">
-                <button>6:00 PM</button>
-                <a href="https://www.google.com/maps?q=Cabaña+la+semilla+villanueva+santander" target="_blank">Cómo Llegar</a>
-            </div>
-        </div>
-    </div>
-        -->
-        <div class="confirm-wrapper" style="background-color: rgba(104, 132, 156, 0.8); width: 100%;">
-            <div class="">
+        
+        <div class="confirm-wrappertwo" style="background-color: rgba(104, 132, 156, 0.8); width: 100%;">
+            <div style="width: 100%; ">
                 <br />
                 <h4>Galería</h4>
 
@@ -831,70 +755,26 @@
                 <div class="circle-photo">
                     <img src="nosotros.jpeg" alt="Foto de nosotros">
                 </div>
-                <!--
-            <p>Para nosotros es muy importante que confirmes tu asistencia a nuestra boda.</p>
-            <p class="confirm-message">Por favor escríbenos o llámanos.</p>
-            <div class="confirm-buttons">
-                <button onclick="redirectToWhatsApp()" style="background-color: #ddaf36;">
-                    <img src="whatsapp.png" alt="Icono de WhatsApp" style="margin-right: 5px; vertical-align: middle;">
-                    <span style="vertical-align: middle;">Escríbenos</span>
-                </button>
-
-                <button style="background-color: #ddaf36; display: flex; align-items: center;">
-                    <img src="llamada.png" alt="Descripción de la imagen" style="margin-right: 5px; vertical-align: middle;">
-                    <span style="vertical-align: middle;">Llámanos</span>
-                </button>
-            </div>
-            <p class="confirm-message">¡Te esperamos!.</p>
-            <br />
-            <p class="hashtag">#BodaMesh&Pipe</p>
-                -->
+                <h2>HOLA</h2>
+                <div class="mygallery">
+                    <img src="nosotros.jpeg" alt="copas">
+                    <img src="nosotros.jpeg" alt="copas">
+                    <img src="nosotros.jpeg" alt="copas">
+                    <img src="nosotros.jpeg" alt="copas">
+                    <img src="nosotros.jpeg" alt="copas">
+                    <img src="nosotros.jpeg" alt="copas">
+                </div>
             </div>
             <br />
         </div>
 
-
         <br /><br />
-
-
 
         <p style="font-family: 'Lobster', cursive; font-style: normal; font-weight: 400; font-size: 36px; color: #ddaf36;">Lluvia de sobres</p>
         <img src="lluvia.png" alt="Lluvia de sobres">
         <br /><br /><br />
 
-        <!--
-    <p style="font-size: 35px; font-family: 'Dancing Script', cursive; color: #152029;">
-        El hombre y la mujer fueron creados el uno para el otro: "No es bueno que el hombre esté solo" (Gn 2, 18).
-        "Por eso deja el hombre a su padre y a su madre y se une a su mujer, y se hacen una sola carne.
-    </p>
-    <p style="font-size: 35px; font-family: 'Dancing Script', cursive; color: #152029;">
-        De este modo, Dios ha creado al hombre y a la mujer por amor y los ha llamado también al amor.
-        Por tanto, el amor mutuo entre ellos se convierte en imagen del amor de Dios hacia nosotros."
-    </p>
-
-    <div class="recommendations">
-        <div class="dresscode">
-            <h3>Dress Code</h3>
-            <img src="dresscode.png" alt="Dresscode">
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="label">Mujeres</p>
-                <p class="label formal">Vestido formal</p>
-            </div>
-            <div class="col">
-                <p class="label">Hombres</p>
-                <p class="label formal">Vestido formal</p>
-            </div>
-        </div>
-    </div>
-
-        -->
         <br /><br />
-
-
-
-
 
         <div class="confirm-wrapper">
             <br />
@@ -912,11 +792,6 @@
                     <img src="whatsapp.png" alt="Icono de WhatsApp" style="margin-right: 5px; vertical-align: middle;">
                     <span style="vertical-align: middle;">Pipe</span>
                 </button>
-                <!--
-            <button style="background-color: #ddaf36; display: flex; align-items: center;">
-                <img src="llamada.png" alt="Descripción de la imagen" style="margin-right: 5px; vertical-align: middle;">
-                <span style="vertical-align: middle;">Llámanos</span>
-            </button>-->
             </div>
             <p class="confirm-message">¡Te esperamos!.</p>
             <br />
@@ -934,7 +809,6 @@
                 window.open(url, "_blank");
             }
         </script>
-
 
 
         <div class="invitation-development">
@@ -972,6 +846,17 @@
                     document.getElementById("countdown").innerHTML = "¡La boda ha llegado!";
                 }
             }, 1000);
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+        <script>
+            // Inicializar la biblioteca Masonry
+            var grid = document.querySelector('.gallery-container');
+            var masonry = new Masonry(grid, {
+                itemSelector: '.gallery-item',
+                columnWidth: '.gallery-item',
+                percentPosition: true
+            });
         </script>
     </div>
 </body>
